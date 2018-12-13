@@ -1,0 +1,6 @@
+*/*
+!*.py
+!**/inputs/*.py
+firedrake/
+*/outputs*/
+

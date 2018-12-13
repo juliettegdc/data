@@ -1,0 +1,10 @@
+name,lat,lon
+Avonmouth,51.51089,-2.71497,
+Dover,51.11439,1.32267,
+Felixstowe,51.95675,1.34839,
+Hinkley_Point,51.21525,-3.13433,
+Ilfracombe,51.21097,-4.11094,
+Milford_Haven,51.70640,-5.05148,
+Mumbles,51.57000,-3.97544,
+Newport,51.55000,-2.98744,
+Sheerness,51.44564,0.74344,
