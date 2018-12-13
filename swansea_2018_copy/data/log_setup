@@ -1,0 +1,206 @@
+
+# mpiexec: full path to program is /export111/work/aa406/firedrake4/firedrake/bin/python
+# mpiexec: program arguments are: distance_from_boundary_severn.py
+# mpiexec: 8 ranks allocated via PBS select
+# mpiexec: 1 OpenMP threads / rank allocated by PBS select
+# mpiexec: Job has shared use of the allocated nodes. Disabling process-pinning
+# mpiexec: launching program...
+
+# mpiexec: machinefile configured as:
+cx1-103-8-4.cx1.hpc.ic.ac.uk:8
+#
+(cx1-103-8-4.cx1.hpc.ic.ac.uk:0,1,2,3,4,5,6,7)
+  0 SNES Function norm 1.022624021505e+08 
+  1 SNES Function norm 1.386290433043e+06 
+  2 SNES Function norm 3.121621796057e+03 
+  3 SNES Function norm 1.694114707753e-02 
+  0 SNES Function norm 2.634905558573e+07 
+  1 SNES Function norm 4.359522054044e+06 
+  2 SNES Function norm 2.151845433099e+05 
+  3 SNES Function norm 1.287828332367e+03 
+  4 SNES Function norm 1.088201531530e-01 
+  0 SNES Function norm 2.392968752803e+06 
+  1 SNES Function norm 1.324174773611e+05 
+  2 SNES Function norm 5.562374317217e+02 
+  3 SNES Function norm 2.885279800199e-02 
+  4 SNES Function norm 1.807966658000e-06 
+  0 SNES Function norm 5.990588405714e+05 
+  1 SNES Function norm 1.015402133603e+04 
+  2 SNES Function norm 4.011676554042e+00 
+  3 SNES Function norm 2.186800165241e-06 
+  0 SNES Function norm 1.029543387735e+08 
+  1 SNES Function norm 1.239175752783e+05 
+  2 SNES Function norm 4.877124278069e+00 
+  3 SNES Function norm 1.988827643552e-04 
+  0 SNES Function norm 3.457577470753e+07 
+  1 SNES Function norm 1.316933622858e+05 
+  2 SNES Function norm 1.003250099519e+01 
+  3 SNES Function norm 9.886311846592e-05 
+  0 SNES Function norm 3.463798369408e+07 
+  1 SNES Function norm 6.902122864933e+05 
+  2 SNES Function norm 7.799612410201e+02 
+  3 SNES Function norm 6.488005692814e-03 
+  0 SNES Function norm 2.144903371477e+07 
+  1 SNES Function norm 8.366406445418e+05 
+  2 SNES Function norm 1.542277717143e+03 
+  3 SNES Function norm 1.999613227777e-02 
+  0 SNES Function norm 2.452626607977e+07 
+  1 SNES Function norm 3.804320935933e+06 
+  2 SNES Function norm 8.936373177802e+04 
+  3 SNES Function norm 2.525069594715e+02 
+  4 SNES Function norm 7.361621914059e-03 
+  0 SNES Function norm 5.597931223673e+06 
+  1 SNES Function norm 2.884250575877e+05 
+  2 SNES Function norm 1.381365211444e+03 
+  3 SNES Function norm 1.164917758997e-01 
+  4 SNES Function norm 9.947304100466e-07 
+  0 SNES Function norm 1.085682989277e+08 
+  1 SNES Function norm 1.795881148700e+07 
+  2 SNES Function norm 1.201374132605e+06 
+  3 SNES Function norm 1.108377080017e+05 
+  4 SNES Function norm 4.909082531773e+02 
+  5 SNES Function norm 1.228397002155e-02 
+  0 SNES Function norm 5.682616141644e+06 
+  1 SNES Function norm 3.687893297577e+06 
+  2 SNES Function norm 1.820046244012e+06 
+  3 SNES Function norm 4.424778723513e+05 
+  4 SNES Function norm 1.717543109404e+04 
+  5 SNES Function norm 1.097034200431e+02 
+  6 SNES Function norm 1.533106682227e-03 
+  0 SNES Function norm 4.077535340436e+06 
+  1 SNES Function norm 2.615859013761e+06 
+  2 SNES Function norm 1.897610589161e+06 
+  3 SNES Function norm 1.330790038520e+06 
+  4 SNES Function norm 1.290919510032e+06 
+  5 SNES Function norm 3.025247877165e+05 
+  6 SNES Function norm 3.867963664149e+04 
+  7 SNES Function norm 1.832458708984e+03 
+  8 SNES Function norm 3.774899276072e+00 
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
+Calculate distance for viscosity
+Solving Eikonal with eps ==  20000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  400.0
+Swansea Lagoon boundary bathymetries
+Solving Eikonal with eps ==  50000.0
+Solving Eikonal with eps ==  25000.0
+Solving Eikonal with eps ==  10000.0
+Solving Eikonal with eps ==  5000.0
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+River boundary bathymetries
+Solving Eikonal with eps ==  1000.0
+Solving Eikonal with eps ==  500.0
+Solving Eikonal with eps ==  200.0
