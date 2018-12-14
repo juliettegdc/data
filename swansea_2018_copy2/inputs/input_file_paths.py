@@ -1,5 +1,5 @@
 # Mesh
-mesh_file = "inputs/severn_refined_at_swansea_cardiff.msh"  #  without lagoon, Elevation boundaries - 5
+mesh_file = "inputs/severn_mesh_6.msh"  #  without lagoon, Elevation boundaries - 5
 
 #mesh_file = "inputs/swansea_2018_2.msh"  # Elevation boundaries - 1,2
 

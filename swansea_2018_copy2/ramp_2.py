@@ -89,9 +89,10 @@ river2 = Constant(-20.)
 river3 = Constant(-5.)
 Gloucester = Constant(-50.)
 
-solver_obj.bnd_functions['shallow_water'] = { 11: {'flux': river1}, 2: {'flux': river2},3: {'flux': river3},
+# 1 was 11 and 5 was 1
+solver_obj.bnd_functions['shallow_water'] = { 1: {'flux': river1}, 2: {'flux': river2},3: {'flux': river3},
                                               4: {'flux': Gloucester},
-                                              1: {'elev': tidal_elev},
+                                              5: {'elev': tidal_elev},
                                              # 6: {'flux': lagoon_hydraulic_structures["tb_i"]},
                                              # 7: {'flux': lagoon_hydraulic_structures["sl_i"]},
                                              # 8: {'flux': lagoon_hydraulic_structures["tb_o"]},

@@ -23,7 +23,7 @@ print ("Calculate distance for viscosity")
 # 5 is the boundary id of the Water Level boundary
 # 3 is the inlet of the basin - I'm letting the distance function there start at 1e5 
 # so we don't accidentaly apply the higher viscosity there as well
-bcs = [DirichletBC(V, 0.0, 1)]
+bcs = [DirichletBC(V, 0.0, 5)] #5 was 1
 
 v = TestFunction(V)
 u = Function(V)
@@ -134,7 +134,7 @@ L = 1e3
 # 4 is the boundary id of the inlet
 # 3 is the inlet of the basin - I'm letting the distance function there start at 1e5
 # Set up hydraulic structures
-bc2 = [DirichletBC(V, 0.0, 11), DirichletBC(V, 0.0, 3),          # Double check that
+bc2 = [DirichletBC(V, 0.0, 1), DirichletBC(V, 0.0, 3), #1 was 11         # Double check that
        DirichletBC(V, 0.0, 2), DirichletBC(V, 0.0, 4)]
 v2 = TestFunction(V)
 u2 = Function(V)

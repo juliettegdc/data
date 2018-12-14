@@ -1,6 +1,6 @@
 # Mesh
 #mesh_file = "inputs/severn_mesh_2.msh"  # Elevation boundaries - 1
-mesh_file = "inputs/swansea_2018_2.msh"  # with lagoon, Elevation boundaries - 5
+mesh_file = "inputs/Swansea_2018_6.msh"  # with lagoon, Elevation boundaries - 5
 
 
 # Bathymetry
