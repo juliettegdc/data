@@ -5,11 +5,11 @@
 mesh_file = "inputs/swansea_cardiff_2018_6.msh" # elev boundary 5
 
 # Bathymetry
-bathymetry_file = "data/swansea_2018_copy/model_data/severn2.nc"
+bathymetry_file = "../swansea_2018_copy/model_data/severn2.nc"
 
 # Forcing
-grid_forcing_file = 'data/swansea_2018_copy/model_data/gridES2008.nc'
-hf_forcing_file = 'data/swansea_2018_copy/model_data/hf.ES2008.nc'
+grid_forcing_file = '../swansea_2018_copy/model_data/gridES2008.nc'
+hf_forcing_file = '../swansea_2018_copy/model_data/hf.ES2008.nc'
 range_forcing_coords = ((-5.,-3.),(50,52))
 
 # Detectors

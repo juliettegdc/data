@@ -53,7 +53,7 @@ coriolis_2d = tools.thetis_support_scripts.coriolis(mesh2d, lat_coriolis)
 # lagoon_swansea_input = input_barrages.input_barrage("/data/swansea_2018_copy/inputs/LagoonSpecs_original.dat")
 # lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat")
 
-lagoon_swansea_input = input_barrages.input_barrage("data/swansea_2018_copy/inputs/LagoonSpecs_original.dat")
+lagoon_swansea_input = input_barrages.input_barrage("../swansea_2018_copy/inputs/LagoonSpecs.dat")
 lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat") # inputs/LagoonSpecs.dat
 
 lagoon_status = pickle.load(open(inputdir + "/barrage_status_"+str(identifier)+".p", "rb")) #should add one?
