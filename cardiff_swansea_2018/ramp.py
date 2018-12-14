@@ -34,7 +34,7 @@ lat_coriolis = 51                   # Coriolis calculation parameters
 
 CG_2d = FunctionSpace(mesh2d, 'CG', 1)
 
-lagoon_swansea_input = input_barrages.input_barrage("../swansea_2018_copy/inputs/LagoonSpecs_original.dat")
+lagoon_swansea_input = input_barrages.input_barrage("../swansea_2018_copy/inputs/LagoonSpecs.dat")
 lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat") # inputs/LagoonSpecs.dat
 
 bathymetry_2d, h_viscosity, mu_manning = thetis_support_scripts.initialise_fields(mesh2d, inputdir, outputdir, identifier, manning=True)

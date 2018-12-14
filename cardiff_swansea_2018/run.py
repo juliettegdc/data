@@ -49,10 +49,6 @@ operation = None
 bathymetry_2d, h_viscosity,  elev_init, uv_init, mu_manning = tools.thetis_support_scripts.initialise_fields(mesh2d, inputdir, outputdir, identifier, manning=True)
 coriolis_2d = tools.thetis_support_scripts.coriolis(mesh2d, lat_coriolis)
 
-# lagoon_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat")
-# lagoon_swansea_input = input_barrages.input_barrage("/data/swansea_2018_copy/inputs/LagoonSpecs_original.dat")
-# lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat")
-
 lagoon_swansea_input = input_barrages.input_barrage("../swansea_2018_copy/inputs/LagoonSpecs.dat")
 lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat") # inputs/LagoonSpecs.dat
 
