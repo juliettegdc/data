@@ -16,32 +16,32 @@ def mesh(name):
 ############################################# cardiff ############################################
 
     boundaries = qmesh.vector.Shapes()
-    boundaries.fromFile('Extended_BCM_lagoon_Swansea.shp') #Extended_BCM_lagoon_Swansea.shp
+    boundaries.fromFile('Severn_estuary_rev.shp') #Extended_BCM_lagoon_Swansea.shp
 
     loopShapes = qmesh.vector.identifyLoops(boundaries,
                                             isGlobal=False, defaultPhysID=1000, fixOpenLoops=True)
     polygonShapes = qmesh.vector.identifyPolygons(loopShapes, smallestNotMeshedArea=300,
                                                   meshedAreaPhysID=1)
 
-    inner = qmesh.vector.Shapes()
-    inner.fromFile('inner_swan.shp')
-    inner_loops = qmesh.vector.identifyLoops(inner,
-                                             fixOpenLoops=True, extraPointsPerVertex=10)
-
-    inner_polygon = qmesh.vector.identifyPolygons(inner_loops, meshedAreaPhysID = 3)
-
-    outer = qmesh.vector.Shapes()
-    outer.fromFile('outer_swan.shp')
-    outer_loops = qmesh.vector.identifyLoops(outer,
-                                             fixOpenLoops=True, extraPointsPerVertex=10)
-    outer_polygon = qmesh.vector.identifyPolygons(outer_loops, meshedAreaPhysID = 4)
+    # inner = qmesh.vector.Shapes()
+    # inner.fromFile('inner_swan.shp')
+    # inner_loops = qmesh.vector.identifyLoops(inner,
+    #                                          fixOpenLoops=True, extraPointsPerVertex=10)
+    #
+    # inner_polygon = qmesh.vector.identifyPolygons(inner_loops, meshedAreaPhysID = 3)
+    #
+    # outer = qmesh.vector.Shapes()
+    # outer.fromFile('outer_swan.shp')
+    # outer_loops = qmesh.vector.identifyLoops(outer,
+    #                                          fixOpenLoops=True, extraPointsPerVertex=10)
+    # outer_polygon = qmesh.vector.identifyPolygons(outer_loops, meshedAreaPhysID = 4)
 
 
 
     ##################################################################################################
     # Create raster for mesh gradation towards full-resolution shorelines.
 
-    ncresx, ncresy = 1000, 1000 #1200, 1200 #600, 600
+    ncresx, ncresy = 1100, 1100 #1200, 1200 #600, 600
     # Create raster for mesh gradation towards full-resolution shorelines.
 
 
@@ -51,7 +51,7 @@ def mesh(name):
     grad_0.setShapes(GSHHS_fine_boundaries)
     grad_0.setRasterBounds(-8.0, -2.0, 50.0, 53.0)
     grad_0.setRasterResolution(ncresx, ncresy)
-    grad_0.setGradationParameters(150.0, 5000.0, 0.5, 0.001)
+    grad_0.setGradationParameters(100.0, 5000.0, 0.5, 0.001)
     grad_0.calculateLinearGradation()
     grad_0.writeNetCDF('grad_isl.nc')
 
@@ -111,8 +111,8 @@ def mesh(name):
     # grad_7.setGradationParameters(100., 5000.0, 1.0, 0.001)
     # grad_7.calculateLinearGradation()
 
-    domainLines, domainPolygons = qmesh.vector.insertRegions(loopShapes, polygonShapes, inner_loops, inner_polygon)
-    domainLines, domainPolygons = qmesh.vector.insertRegions(domainLines, domainPolygons, outer_loops, outer_polygon)
+    # domainLines, domainPolygons = qmesh.vector.insertRegions(loopShapes, polygonShapes, inner_loops, inner_polygon)
+    # domainLines, domainPolygons = qmesh.vector.insertRegions(domainLines, domainPolygons, outer_loops, outer_polygon)
 
     # Calculate overall mesh-metric raster
     meshMetricRaster = qmesh.raster.meshMetricTools.minimumRaster([grad_0, grad_1, grad_2, grad_3, grad_6]) #grad_0
@@ -120,8 +120,8 @@ def mesh(name):
     # Create domain object and write gmsh files.
     domain = qmesh.mesh.Domain()
     #
-    domain.setGeometry(domainLines, domainPolygons)
-    # domain.setGeometry(loopShapes, polygonShapes)
+    # domain.setGeometry(domainLines, domainPolygons)
+    domain.setGeometry(loopShapes, polygonShapes)
     domain.setMeshMetricField(meshMetricRaster)
     domain.setTargetCoordRefSystem('EPSG:32630', fldFillValue=1000.0)
     # Meshing
@@ -148,7 +148,7 @@ if __name__ == '__main__':
 
     # print (os.getcwd())
     # os.chdir("/data/cardiff_2018/inputs/")
-    name = "swansea_2018_6"
+    name = "severn_refined_at_swansea_2018_6"
     # Initialising qgis API
     qmesh.initialise()
 

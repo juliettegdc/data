@@ -13,14 +13,14 @@ outputdir = inputs.input_file_paths.paraview_output_folder
 datadir = 'data'
 
 with timed_stage('reading mesh'):
-  mesh2d = Mesh(inputs.input_file_paths.mesh_file)
+    mesh2d = Mesh(inputs.input_file_paths.mesh_file)
 
 print_output('Loaded mesh '+mesh2d.name)
 print_output('Exporting to '+outputdir)
 
 # simulation
-identifier = -1
-print_output('Simulation identifier : '+str (identifier))
+#identifier = -1
+#print_output('Simulation identifier : '+str (identifier))
 
 t_end = 30 * 24 * 3600                          # Simulation duration in sec
 t_start =  0#identifier * 30 * 24 * 3600           # Simulation start time relative to tidal_forcing
@@ -50,8 +50,11 @@ bathymetry_2d, h_viscosity,  elev_init, uv_init, mu_manning = tools.thetis_suppo
 coriolis_2d = tools.thetis_support_scripts.coriolis(mesh2d, lat_coriolis)
 
 # lagoon_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat")
-lagoon_swansea_input = input_barrages.input_barrage("/data/swansea_2018_copy/inputs/LagoonSpecs.dat")
-lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat")
+# lagoon_swansea_input = input_barrages.input_barrage("/data/swansea_2018_copy/inputs/LagoonSpecs_original.dat")
+# lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat")
+
+lagoon_swansea_input = input_barrages.input_barrage("/data/swansea_2018_copy/inputs/LagoonSpecs_original.dat")
+lagoon_cardiff_input = input_barrages.input_barrage("inputs/LagoonSpecs.dat") # inputs/LagoonSpecs.dat
 
 lagoon_status = pickle.load(open(inputdir + "/barrage_status_"+str(identifier)+".p", "rb")) #should add one?
 
@@ -164,7 +167,7 @@ def intermediate_steps(t):
     f1.write("\n")
     f1.flush()
 
-    for item in cb_lagoon1.output:
+    for item in cb_lagoon2.output:
         f3.write(" {:8.3f} ".format(item))
     f3.write("\n")
     f3.flush()

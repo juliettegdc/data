@@ -20,7 +20,7 @@ elevation_detectors = [[432596, 5713648],
                        [519445, 5706866]]
 
 # Outputs folder
-paraview_output_folder = 'outputs3'
+paraview_output_folder = 'outputs'
 
 # Constituent field calculation output
 spatial_harmonics_distribution = True

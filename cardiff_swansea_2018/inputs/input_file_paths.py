@@ -2,7 +2,7 @@
 # mesh_file = "inputs/severn_mesh_2.msh"  # Elevation boundaries - 5
 # mesh_file = "inputs/cardiff_lagoon_2018.msh"  # Elevation boundaries - 1,2
 
-mesh_file = "inputs/swansea_cardiff_2018.msh" # elev boundary 5
+mesh_file = "inputs/swansea_cardiff_2018_6.msh" # elev boundary 5
 
 # Bathymetry
 bathymetry_file = "/data/swansea_2018_copy/model_data/severn2.nc"
@@ -21,7 +21,7 @@ elevation_detectors = [[432596, 5713648],
                        [519445, 5706866]]
 
 # Outputs folder
-paraview_output_folder = 'outputs2'
+paraview_output_folder = 'outputs'
 
 # Constituent field calculation output
 spatial_harmonics_distribution = True

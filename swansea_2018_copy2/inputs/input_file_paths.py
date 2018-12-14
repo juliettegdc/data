@@ -1,5 +1,5 @@
 # Mesh
-mesh_file = "inputs/severn_refined_at_swan.msh"  #  without lagoon, Elevation boundaries - 5
+mesh_file = "inputs/severn_refined_at_swansea_cardiff.msh"  #  without lagoon, Elevation boundaries - 5
 
 #mesh_file = "inputs/swansea_2018_2.msh"  # Elevation boundaries - 1,2
 
@@ -20,7 +20,7 @@ elevation_detectors = [[432596, 5713648],
                        [519445, 5706866]]
 
 # Outputs folder
-paraview_output_folder = 'outputs2'
+paraview_output_folder = 'outputs'
 
 # Constituent field calculation output
 spatial_harmonics_distribution = True

@@ -5,7 +5,7 @@ def mesh(name):
     # Reading in the shapefile describing the domain boundaries, and creating a gmsh file.
 
     boundaries = qmesh.vector.Shapes()
-    boundaries.fromFile('Severn_estuary_rev.shp')  # severn_cardiff.shp # Extended_BCM_lagoon_Swansea.shp
+    boundaries.fromFile('severn_cardiff.shp')  # severn_cardiff.shp # Extended_BCM_lagoon_Swansea.shp #Severn_estuary_rev.shp
 
     loopShapes = qmesh.vector.identifyLoops(boundaries,
                                             isGlobal=False, defaultPhysID=1000, fixOpenLoops=True)
@@ -60,7 +60,7 @@ def mesh(name):
     ##################################################################################################
     # Create raster for mesh gradation towards full-resolution shorelines.
 
-    ncresx, ncresy = 1300, 1300#700, 700#1000, 1000 #900, 900#800, 800#600, 600 # 1000, 1000 #1200, 1200 #600, 600
+    ncresx, ncresy = 1000, 1000#700, 700#1000, 1000 #900, 900#800, 800#600, 600 # 1000, 1000 #1200, 1200 #600, 600
     # Create raster for mesh gradation towards full-resolution shorelines.
 
 
@@ -81,7 +81,7 @@ def mesh(name):
     grad_1.setShapes(GSHHS_fine_boundaries)
     grad_1.setRasterBounds(-8.0, -2.0, 50.0, 53.0)
     grad_1.setRasterResolution(ncresx, ncresy)
-    grad_1.setGradationParameters(150.0, 10000.0, 1)
+    grad_1.setGradationParameters(100.0, 10000.0, 1)
     grad_1.calculateLinearGradation()
     grad_1.writeNetCDF('grad_100.nc')
 
@@ -145,16 +145,16 @@ def mesh(name):
     grad_6.writeNetCDF('grad_swan1.nc')
 
 
-    GSHHS_coarser_boundaries = qmesh.vector.Shapes()
-    GSHHS_coarser_boundaries.fromFile('lagoon_Swansea.shp')
-    grad_7 = qmesh.raster.meshMetricTools.gradationToShapes()
-    grad_7.setShapes(GSHHS_coarser_boundaries)
-    grad_7.setRasterBounds(-8.0, -2.0, 50.0, 53.0)
-    grad_7.setRasterResolution(ncresx, ncresy)
-    grad_7.setGradationParameters(100., 5000.0, 1.0, 0.001)
-    grad_7.calculateLinearGradation()
-    grad_7.writeNetCDF('grad_swan2.nc')
-    #
+    # GSHHS_coarser_boundaries = qmesh.vector.Shapes()
+    # GSHHS_coarser_boundaries.fromFile('lagoon_Swansea.shp')
+    # grad_7 = qmesh.raster.meshMetricTools.gradationToShapes()
+    # grad_7.setShapes(GSHHS_coarser_boundaries)
+    # grad_7.setRasterBounds(-8.0, -2.0, 50.0, 53.0)
+    # grad_7.setRasterResolution(ncresx, ncresy)
+    # grad_7.setGradationParameters(100., 5000.0, 1.0, 0.001)
+    # grad_7.calculateLinearGradation()
+    # grad_7.writeNetCDF('grad_swan2.nc')
+    # #
     # domainLines, domainPolygons = qmesh.vector.insertRegions(loopShapes, polygonShapes, inner_loops, inner_polygon)
     # domainLines, domainPolygons = qmesh.vector.insertRegions(domainLines, domainPolygons, outer_loops, outer_polygon)
     #
@@ -176,7 +176,7 @@ def mesh(name):
                                                              outer_swan_polygon)
 
     # Calculate overall mesh-metric raster
-    meshMetricRaster = qmesh.raster.meshMetricTools.minimumRaster([grad_0, grad_1, grad_2, grad_3, grad_4, grad_5, grad_6, grad_7]) #grad_0
+    meshMetricRaster = qmesh.raster.meshMetricTools.minimumRaster([grad_0, grad_1, grad_2, grad_3, grad_4, grad_5, grad_6]) #grad_0
     meshMetricRaster.writeNetCDF('meshMetric.nc')
     # Create domain object and write gmsh files.
     domain = qmesh.mesh.Domain()
@@ -209,7 +209,7 @@ if __name__ == '__main__':
 
     # print (os.getcwd())
     # os.chdir("/data/cardiff_2018/inputs/")
-    name = "swansea_cardiff_2018_7"
+    name = "swansea_cardiff_2018_final"
     # Initialising qgis API
     qmesh.initialise()
 
